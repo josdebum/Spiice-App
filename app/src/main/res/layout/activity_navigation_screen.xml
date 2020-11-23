@@ -21,6 +21,7 @@
         app:menu="@menu/bottom_navigation"
         app:labelVisibilityMode="labeled"
         android:paddingTop="12dp"
-   app:itemIconTint="#9378FF"/>
+   app:itemIconTint="#9378FF"
+        />
 
 </RelativeLayout>

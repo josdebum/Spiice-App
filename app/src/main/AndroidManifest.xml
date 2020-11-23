@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NavigationScreen"></activity>
+        <activity android:name=".ReviewsDetailActivity"></activity>
+        <activity android:name=".SendYourWorkActivity" />
+        <activity android:name=".ProjectActivity" />
+        <activity android:name=".AllProjectActivity" />
+        <activity android:name=".OnboardingScreens" />
+        <activity android:name=".NavigationScreen" />
         <activity android:name=".SigninScreen" />
         <activity android:name=".SignUpScreen" />
-        <activity android:name=".OnboardingScreens" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

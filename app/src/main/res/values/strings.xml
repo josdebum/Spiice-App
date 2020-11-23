@@ -2,4 +2,12 @@
     <string name="app_name">Spiice App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pager">PagerActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="prev" />
+    <string name="skip">skip</string>
+    <string name="next">next</string>
+    <string name="finish">finish</string>
+    <string name="i_need_a_designer_for_my_new_website_the_project_is_just_at_the_beginning_and_i_need_wireframes_before_i_start_coding_the_website_i_only_want_wireframes_and_i_don_t_want_prototype_or_ui_design">I need a designer for my new website. The project is just at the beginning and I need wireframes before I start coding the website. I only want wireframes and I don’t want prototype or UI design.</string>
 </resources>

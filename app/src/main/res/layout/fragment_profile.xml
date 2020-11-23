@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FAF9FE"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+    android:id="@+id/page_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Profile"
+    android:textStyle="bold"
+    android:textSize="48sp"
+    android:layout_margin="20dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_title"
+        android:src="@drawable/profile_picture"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/profile_picture"
+        app:layout_constraintTop_toBottomOf="@id/page_title"
+        android:text="Alex Marchal"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/profile_picture"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:text="UX Designer"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_picture"
+            android:text="Description"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/profile_picture"
+            app:layout_constraintTop_toBottomOf="@id/description_title"
+            android:text="My name is Dustin, I’m a young designer from Dublin. I practice for 4 years now, worked with small and big agencies.
+Blablabla"
+            android:textSize="14sp"
+            android:layout_margin="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/no_of_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            android:text="64 reviews"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            android:text="Average rating"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:textStyle="normal"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@id/text_1"
+            style="@style/ShapeAppearance.MaterialComponents.SmallComponent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating"
+            android:text="Last review:"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:textStyle="normal"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_3"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_2"
+            android:text="Awesome job!
+- Kyle Wilson"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:textStyle="normal"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_bg"
+            android:text="View All"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating"
+            android:layout_marginRight="20dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/portfolio_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_3"
+            android:text="Portfolio"
+            android:textSize="20sp"
+            android:layout_margin="20dp"
+            android:textStyle="bold"/>
+        
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/project_picture_1"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/portfolio_text"
+            android:src="@drawable/project_image_1"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/project_picture_2"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/project_picture_1"
+            android:src="@drawable/project_image_2"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/project_picture_3"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/portfolio_text"
+            android:src="@drawable/project_image_3"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/project_picture_4"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/project_picture_3"
+            android:src="@drawable/project_image_4"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
