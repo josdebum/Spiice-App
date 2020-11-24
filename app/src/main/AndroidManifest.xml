@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReviewsDetailActivity"></activity>
+        <activity android:name=".EachSearchActivity"></activity>
+        <activity android:name=".GraphActivity" />
+        <activity android:name=".ReviewsDetailActivity" />
         <activity android:name=".SendYourWorkActivity" />
         <activity android:name=".ProjectActivity" />
         <activity android:name=".AllProjectActivity" />
