@@ -1,37 +1,45 @@
-package com.example.spiiceapp
+package com.example.spiiceapp.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.spiiceapp.MessageListAdapter
+import com.example.spiiceapp.Messages
+import com.example.spiiceapp.R
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import kotlinx.android.synthetic.main.activity_graph.*
+import kotlinx.android.synthetic.main.fragment_message.*
 
 
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
+
+
+
     ): View? {
+
+
+
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+
+
+        return rootView
     }
 
     companion object {
+
         /**
          * Use this factory method to create a new instance of
          * this fragment using the provided parameters.
@@ -45,6 +53,7 @@ class HomeFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             HomeFragment().apply {
                 arguments = Bundle().apply {
+
 
                     fun setBarChart() {
                         val entries = ArrayList<BarEntry>()
@@ -75,8 +84,18 @@ class HomeFragment : Fragment() {
                         barChart.animateY(5000)
                     }
 
+
+
                 }
             }
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
 
 
     }

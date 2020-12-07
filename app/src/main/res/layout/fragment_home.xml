@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FAF9FE"
-    tools:context=".HomeFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,23 +16,23 @@
         android:layout_height="wrap_content"
         android:text="Feed"
         android:textStyle="bold"
-        android:textSize="48sp"
+        android:textSize="38sp"
         android:layout_margin="20dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <TextView
-        android:id="@+id/page_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resume"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/page_title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="20dp" />
+        <TextView
+            android:id="@+id/page_status"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Resume"
+            android:textSize="26sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/page_title" />
 
 <!--    <androidx.appcompat.widget.AppCompatImageView-->
 <!--        android:id="@+id/chart"-->
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Active Projects"
-        android:textStyle="bold"
+        android:textStyle="normal"
         android:textSize="30sp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="Wireframes"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:layout_marginBottom="10dp"
                 android:textSize="26sp"/>
 
@@ -159,7 +159,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="Need a new logo"
-                android:textStyle="bold"
+                android:textStyle="normal"
                 android:layout_marginBottom="10dp"
                 android:textSize="26sp"/>
 

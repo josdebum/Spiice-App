@@ -130,27 +130,6 @@
         android:textAllCaps="false"
         />
 
-    <FrameLayout
-        android:id="@+id/frame_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomNav"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_nav_bg"
-        app:menu="@menu/bottom_navigation"
-        app:labelVisibilityMode="labeled"
-        android:paddingTop="12dp"
-        app:itemIconTint="#9378FF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
 
 
 
