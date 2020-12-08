@@ -21,8 +21,8 @@
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled"
         android:paddingTop="12dp"
-   app:itemIconTint="@color/colorPrimary"
         android:elevation="20dp"
+
 
         />
 

@@ -34,31 +34,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/page_title" />
 
-<!--    <androidx.appcompat.widget.AppCompatImageView-->
-<!--        android:id="@+id/chart"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/page_status"-->
-<!--        android:src="@drawable/charts"/>-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/page_status"
+        android:src="@drawable/charts"/>
 
-        <LinearLayout
-            android:id="@+id/chart"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/page_status"
-            android:background="#FFFFFF">
-
-            <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/barChart"
-            android:layout_width="200dp"
-            android:layout_height="match_parent" />
-
-
-
-
-        </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/active_project_text"
@@ -74,6 +57,7 @@
         android:layout_marginLeft="20dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/view_all"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_bg"
@@ -91,6 +75,7 @@
         android:layout_margin="20dp"
         app:cardElevation="20dp"
         android:background="#FFFFFF"
+        android:clickable="true"
         android:id="@+id/project_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/active_project_text">

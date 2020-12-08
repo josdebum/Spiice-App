@@ -7,19 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.spiiceapp.MessageListAdapter
 import com.example.spiiceapp.Messages
 import com.example.spiiceapp.R
 import kotlinx.android.synthetic.main.fragment_message.*
 
 
 class MessageFragment : Fragment() {
-  //  private var adapter: MessageListAdapter? = null
-    private var chatList: ArrayList<Messages>? = null
+    private var adapter: MessageListAdapter? = null
+    private var messageList: ArrayList<Messages>? = null
    // private var layoutManager: RecyclerView.LayoutManager? = null
 
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<MessageListAdapter.ViewHolder>? = null
+    private var adapter: MessageListAdapter? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,17 +38,20 @@ class MessageFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_message, container, false)
 
+        messageList = ArrayList<Messages>()
+        layoutManager = LinearLayoutManager(this.context)
+        adapter = MessageListAdapter(messageList!!, this)
+
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         message_recycler.apply {
-            // set a LinearLayoutManager to handle Android
-            // RecyclerView behavior
-            layoutManager = LinearLayoutManager(activity)
-            // set the custom adapter to the RecyclerView
-            adapter = MessageListAdapter()
+
+            message_recycler.layoutManager = layoutManager
+            message_recycler.adapter = adapter
+            messageList!!.add(Messages("Adebayo Apercu", "A selection of chicken dishes served together ...", R.drawable.josdebum))
         }
     }
 }
