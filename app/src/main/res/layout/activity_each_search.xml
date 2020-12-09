@@ -65,9 +65,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/i_need_a_designer_for_my_new_website_the_project_is_just_at_the_beginning_and_i_need_wireframes_before_i_start_coding_the_website_i_only_want_wireframes_and_i_don_t_want_prototype_or_ui_design"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textColor="#99879D"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         android:textStyle="normal"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -79,7 +79,7 @@
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/project_description"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="10dp"
         android:textColor="#99879D"
         android:textStyle="normal"/>
@@ -109,7 +109,7 @@
         android:textSize="10sp"
         android:textAllCaps="true"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="20dp"
         android:background="@drawable/ic_rectangle_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/propositions"
@@ -167,12 +167,12 @@
         android:textAlignment="center"
         android:paddingTop="6dp"
         android:gravity="center_horizontal"
-        android:layout_marginLeft="4dp" />
+        android:layout_marginLeft="20dp" />
 
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/sign_up_button"
+        android:id="@+id/make_proposition"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="50dp"

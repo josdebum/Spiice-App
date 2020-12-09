@@ -7,18 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.spiiceapp.MessageListAdapter
 import com.example.spiiceapp.Messages
 import com.example.spiiceapp.R
 import kotlinx.android.synthetic.main.fragment_message.*
 
 
 class MessageFragment : Fragment() {
-    private var adapter: MessageListAdapter? = null
-    private var messageList: ArrayList<Messages>? = null
+    private var mAdapter: MessageListAdapter? = null
+    private var messageList: ArrayList<Messages>? = arrayListOf()
    // private var layoutManager: RecyclerView.LayoutManager? = null
 
-    private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: MessageListAdapter? = null
+    private var mLayoutManager: RecyclerView.LayoutManager? = null
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,11 +37,13 @@ class MessageFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
+
+       // messageList = ArrayList<Messages>()
+        mLayoutManager = LinearLayoutManager(this.context)
+        mAdapter = this.context?.let { MessageListAdapter(messageList!!, it) }
+
         return inflater.inflate(R.layout.fragment_message, container, false)
 
-        messageList = ArrayList<Messages>()
-        layoutManager = LinearLayoutManager(this.context)
-        adapter = MessageListAdapter(messageList!!, this)
 
 
     }
@@ -48,10 +51,21 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         message_recycler.apply {
+            layoutManager = mLayoutManager
+            adapter = mAdapter
+            messageList!!.add(Messages("Alex Marchal", "I have some questions about...", R.drawable.avatar))
+            messageList!!.add(Messages("Norma Wilson", "http://www.warephase.com", R.drawable.kylie_avatar))
+            messageList!!.add(Messages("Morris Murphy", "Hope it will work in the week...", R.drawable.morris_avatar))
+            messageList!!.add(Messages("Kylie Lane", "Thank you! It really shine with...", R.drawable.ted_avatar))
+            messageList!!.add(Messages("Ted Steward", "Yes I know", R.drawable.wade_avatar))
+            messageList!!.add(Messages("Wade Mccoy", "It will be online in 2 days", R.drawable.norma_avatar))
+            messageList!!.add(Messages("Alex Marchal", "I have some questions about...", R.drawable.avatar))
+            messageList!!.add(Messages("Norma Wilson", "http://www.warephase.com", R.drawable.kylie_avatar))
+            messageList!!.add(Messages("Morris Murphy", "Hope it will work in the week...", R.drawable.morris_avatar))
+            messageList!!.add(Messages("Kylie Lane", "Thank you! It really shine with...", R.drawable.ted_avatar))
+            messageList!!.add(Messages("Ted Steward", "Yes I know", R.drawable.wade_avatar))
+            messageList!!.add(Messages("Wade Mccoy", "It will be online in 2 days", R.drawable.norma_avatar))
 
-            message_recycler.layoutManager = layoutManager
-            message_recycler.adapter = adapter
-            messageList!!.add(Messages("Adebayo Apercu", "A selection of chicken dishes served together ...", R.drawable.josdebum))
         }
     }
 }

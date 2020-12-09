@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/back_arrow"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/ic_back_arrow"
@@ -25,8 +25,8 @@
         app:layout_constraintStart_toEndOf="@id/back_arrow"
         app:layout_constraintTop_toTopOf="parent"
         android:text="Back"
-        android:textSize="24sp"
-        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_marginTop="22dp"
         android:layout_marginStart="10dp"
         android:textColor="#99879D"
         android:layout_marginLeft="10dp"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/back_text"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="26dp"
         android:orientation="vertical"
         android:background="#9378FF">
 
@@ -123,9 +123,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:text="@string/i_need_a_designer_for_my_new_website_the_project_is_just_at_the_beginning_and_i_need_wireframes_before_i_start_coding_the_website_i_only_want_wireframes_and_i_don_t_want_prototype_or_ui_design"
-        android:textSize="20dp"
+        android:textSize="16dp"
         android:textColor="#99879D"
-        android:layout_margin="10dp"
+        android:layout_margin="20dp"
         android:textStyle="normal"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -151,7 +151,7 @@
         android:text="$ 600"
         android:textSize="26dp"
         android:textColor="#9378FF"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="10dp"
         android:textStyle="normal"

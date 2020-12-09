@@ -1,11 +1,14 @@
 package com.example.spiiceapp.ui.Search
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.spiiceapp.EachSearchActivity
 import com.example.spiiceapp.R
+import kotlinx.android.synthetic.main.fragment_search.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +38,15 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_search, container, false)
+
+        rootView.view_search.setOnClickListener(){
+            val context= rootView.context
+            val intent = Intent( context, EachSearchActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        return  rootView
     }
 
     companion object {

@@ -1,6 +1,7 @@
 package com.example.spiiceapp
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,8 @@ private val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
 
             itemView.setOnClickListener {
+                val intent = Intent( context, ChatActivity::class.java)
+                context.startActivity(intent)
 
             }
 
